@@ -1,5 +1,5 @@
 /* 
-https://coolors.co/1c2321-7d98a1-5e6572-a9b4c2-eef1ef
+https://coolors.co/f1e4e8-e2dcde-ceb1be-b97375-2d2d34
 */
 
 * {
@@ -17,11 +17,11 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #1c2321;
-  background-color: #eef1ef;
+  background-color: #e2dcde;
 }
 
 .header {
-  background-color: #5e6572;
+  color: #2d2d34;
   width: 100%;
   height: 12rem;
   font-size: 2.4rem;
