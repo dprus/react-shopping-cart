@@ -1,7 +1,41 @@
+const products = [
+  {
+    image: "./images/iphone-15-pro.jpg",
+    name: "Smartfon APPLE iPhone 15 Pro 256GB",
+    price: 5757,
+  },
+  {
+    image: "./images/iphone-15.jpg",
+    name: "Smartfon APPLE iPhone 15 128GB",
+    price: 3754,
+  },
+  {
+    image: "./images/sluchawki-apple.jpg",
+    name: "Słuchawki nauszne APPLE Airpods Max",
+    price: 2569,
+  },
+  {
+    image: "./images/xbox.jpg",
+    name: "Konsola MICROSOFT XBOX Series X",
+    price: 2099,
+  },
+  {
+    image: "./images/playstation.jpg",
+    name: "Konsola SONY PlayStation 5 Slim",
+    price: 2689,
+  },
+  {
+    image: "./images/sluchawki-sony.jpg",
+    name: "Słuchawki nauszne SONY WH-1000XM5B ANC",
+    price: 1699,
+  },
+];
+
 export default function App() {
   return (
     <div>
       <Header />
+      <Products />
     </div>
   );
 }
@@ -9,7 +43,7 @@ export default function App() {
 function Header() {
   return (
     <header className="header">
-      <h1 className="logo">Online Shop</h1>
+      <h1 className="logo">Sklep Online</h1>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -25,5 +59,30 @@ function Header() {
         />
       </svg>
     </header>
+  );
+}
+
+function Products() {
+  return (
+    <div className="products">
+      {products.map((product) => (
+        <Product
+          image={product.image}
+          name={product.name}
+          price={product.price}
+        />
+      ))}{" "}
+    </div>
+  );
+}
+
+function Product({ image, name, price }) {
+  return (
+    <div className="product">
+      <img src={image} alt={name} className="product-img"></img>
+      <span>{name}</span>
+      <span>{price}</span>
+      <button>Do koszyka</button>
+    </div>
   );
 }
