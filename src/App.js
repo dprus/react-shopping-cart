@@ -20,7 +20,7 @@ const products = [
     price: 2099,
   },
   {
-    image: "./images/playstation.jpg",
+    image: "./images/playstation-5.jpg",
     name: "Konsola SONY PlayStation 5 Slim",
     price: 2689,
   },
@@ -64,14 +64,16 @@ function Header() {
 
 function Products() {
   return (
-    <div className="products">
-      {products.map((product) => (
-        <Product
-          image={product.image}
-          name={product.name}
-          price={product.price}
-        />
-      ))}{" "}
+    <div className="products-container">
+      <div className="products">
+        {products.map((product) => (
+          <Product
+            image={product.image}
+            name={product.name}
+            price={product.price}
+          />
+        ))}{" "}
+      </div>
     </div>
   );
 }
@@ -80,9 +82,9 @@ function Product({ image, name, price }) {
   return (
     <div className="product">
       <img src={image} alt={name} className="product-img"></img>
-      <span>{name}</span>
-      <span>{price}</span>
-      <button>Do koszyka</button>
+      <span className="product-name">{name}</span>
+      <span className="product-price">{price} zł</span>
+      <button className="product-btn">Do koszyka</button>
     </div>
   );
 }
