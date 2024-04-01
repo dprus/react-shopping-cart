@@ -35,15 +35,15 @@ body {
   padding: 0 36rem;
 }
 
-.icon {
+.cart-icon {
   width: 4.8rem;
   height: 4.8rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.icon:hover,
-.icon:active {
+.cart-icon:hover,
+.cart-icon:active {
   color: #ceb1be;
 }
 
