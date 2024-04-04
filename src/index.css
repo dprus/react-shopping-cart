@@ -47,6 +47,52 @@ body {
   color: #ceb1be;
 }
 
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64rem;
+  height: 6.4rem;
+}
+
+form {
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  height: 4.8rem;
+  width: 48rem;
+  border-radius: 1.2rem 0 0 1.2rem;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  caret-color: #2d2d34;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search button {
+  height: 4.8rem;
+  width: 4.8rem;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  background-color: #ceb1be;
+  border-radius: 0 1.2rem 1.2rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.search button:hover,
+.search button:active {
+  background-color: #b97375;
+}
+
 /* ----------------PRODUCTS------------------ */
 
 .products-container {
